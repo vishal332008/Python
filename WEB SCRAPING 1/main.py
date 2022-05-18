@@ -28,4 +28,4 @@ for i in range(1,len(temp_list)):
     
 df2 = pd.DataFrame(list(zip(names,Distance,Mass,Radius,Lum)),columns=['Star_name','Distance','Mass','Radius','Luminosity'])
 print(df2)
-df2.to_csv('bright_stars.csv')
+df2.to_csv('stars.csv')
