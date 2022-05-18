@@ -26,6 +26,5 @@ for i in range(1,len(temp_list)):
     Radius.append(temp_list[i][6])
     Lum.append(temp_list[i][7])
     
-df2 = pd.DataFrame(list(zip(names,Distance,Mass,Radius,Lum)),columns=['Star_name','Distance','Mass','Radius','Luminosity'])
-print(df2)
-df2.to_csv('stars.csv')
+df1 = pd.DataFrame(list(zip(names,Distance,Mass,Radius,Lum)),columns=['Star_name','Distance','Mass','Radius','Luminosity'])
+df1.to_csv('stars.csv')
