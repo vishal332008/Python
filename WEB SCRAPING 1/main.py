@@ -2,9 +2,9 @@ from bs4 import BeautifulSoup as bs
 import requests
 import pandas as pd
 
-bright_stars_url = 'https://en.wikipedia.org/wiki/List_of_brightest_stars_and_other_record_stars'
+url = 'https://en.wikipedia.org/wiki/List_of_brightest_stars_and_other_record_stars'
 
-page = requests.get(bright_stars_url)
+page = requests.get(url)
 soup = bs(page.text,'html.parser')
 star_table = soup.find('table')
 temp_list= []
