@@ -13,16 +13,16 @@ for tr in star_table[5].find_all('tr'):
     row = [i.text.rstrip() for i in td]
     temp_list.append(row)
     
-names = []
+Names = []
 Distance =[]
 Mass = []
 Radius =[]
 for i in range(1,len(temp_list)):
-    names.append(temp_list[i][0])
+    Names.append(temp_list[i][0])
     Distance.append(temp_list[i][5])
     Mass.append(temp_list[i][7])
     Radius.append(temp_list[i][8])
 
-df = pd.DataFrame(list(zip(names,Distance,Mass,Radius)),columns=['Star_name','Distance','Mass','Radius'])
+df = pd.DataFrame(list(zip(Names,Distance,Mass,Radius)),columns=['Star_name','Distance','Mass','Radius'])
 
 df.to_csv('dwarfs.csv')
